@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  opacity: 0.75;
+}
+.logo {
+  width: 150px;
+  height: 50px;
+}
+.logo-1:hover {
+  opacity: 1;
+}
+body {
+  font-family: "DM Sans", serif;
+  overflow-x: hidden;
+}
+
+.features,
+.gallery {
+  background: linear-gradient(
+    to bottom,
+    black 5%,
+    #181818 35%,
+    #181818 75%,
+    black 95%
+  );
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 88px;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, transparent);
+  pointer-events: none;
+}
+#backtotop {
+  position: fixed;
+
+  width: 30px;
+  height: 30px;
+  right: 20%;
+  bottom: 10%;
+}
+#form1 {
+  width: 75%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #181818;
+  color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+.login:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-p {
+    width: 75%;
+  }
+  .hero-h1 {
+    width: 75%;
+  }
+  #backtotop {
+    width: 50px;
+    height: 50px;
+    right: 5%;
+    bottom: 10%;
+  }
+  #form1 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-p {
+    width: 50%;
+  }
+  .hero-h1 {
+    width: 50%;
+  }
+  #form1 {
+    width: 25%;
+  }
+}
